@@ -9,6 +9,22 @@
 }
 /* write your parent styles in here for your App.js */
 
+
+.swTitle{
+  margin-top: 6rem;
+  padding: 2rem;
+  border: 100px groove rgba(46, 58, 90, 0.356);
+  border-radius: 5%;
+}
+
+h1{
+  margin-top: 0px;
+}
+
+h2{
+  margin-bottom: 0px;
+}
+
 .userContainer{
   background-color: rgba(255, 255, 255, 0.753);
   width: 700px;
@@ -22,7 +38,29 @@
 }
 
 form{
-  
+  background-color: rgba(255, 255, 255, 0.753);
+  width: 500px;
+  height: 500px;
+  margin: 1rem;
+  border-radius: 100%;
+  border: 10px groove rgba(8, 83, 8, 0.432);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+input{
+  width: 250px;
+  margin: .5rem;
+
+}
+
+.republic{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .userInfo{

@@ -6,7 +6,7 @@ import JediForm from './JediForm'
 const forceUsers = [
     {
         name: 'Revan',
-        title: 'Darth',
+        title: 'Dark Lord, Jedi Master',
         faction: '*flexable*',
         img: 'https://cdn.shopify.com/s/files/1/2025/9623/products/product-image-309337603_1280x1280.jpg?v=1497464005',
         location: 'Star Forge',
@@ -95,20 +95,22 @@ class List extends Component {
     render(){
 
         return(
-             <>   
-                <h1>Jedi/Sith</h1>
 
-                <JediForm 
-                name={this.state.name}
-                title={this.state.title}
-                faction={this.state.faction}
-                img={this.state.img}
-                location={this.state.location}
-                bio={this.state.bio}
-                forcePush={this.forcePush}
-                addJedi={this.addJedi}
-                />
+            <>
+                <div className='republic'>   
+                    
 
+                    <JediForm 
+                    name={this.state.name}
+                    title={this.state.title}
+                    faction={this.state.faction}
+                    img={this.state.img}
+                    location={this.state.location}
+                    bio={this.state.bio}
+                    forcePush={this.forcePush}
+                    addJedi={this.addJedi}
+                    />
+                </div>
 
                 <div className='profiles'>
                     {this.state.jediList.map(element => (

@@ -6,6 +6,9 @@ import React from 'react';
 const JediForm = props => {
     return(
         <form onSubmit={props.addJedi}>
+            <h2>Add your</h2>
+            <h1>Jedi or Sith</h1>
+
             <input 
                 placeholder='name'
                 type='text'
