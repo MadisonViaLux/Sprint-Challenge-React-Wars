@@ -33,6 +33,11 @@ const ListForm = props => {
                     <p>
                         <strong>Location: </strong> {props.userObject.location}
                     </p>
+
+                    <p>
+                        <strong>Bio: </strong> <a href={props.userObject.bio}>(Use the Force to reveal the information you seek..)</a>
+                    </p>
+
                 </div>
             </div>
         </div>
