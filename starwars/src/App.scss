@@ -1,8 +1,39 @@
 .App {
   text-align: center;
+  display: flex;
+  justify-content: center;
 }
 .Header {
   color: #443e3e;
   text-shadow: 1px 1px 5px #fff;
 }
 /* write your parent styles in here for your App.js */
+
+.userContainer{
+  background-color: rgba(255, 255, 255, 0.753);
+  width: 700px;
+  height: auto;
+  margin: 5rem;
+  padding: 1rem;
+  border-radius: 5%;
+  border: 10px groove rgba(8, 83, 8, 0.432);
+  display: flex;
+  justify-content: space-around;
+}
+
+.userInfo{
+  background-color: rgba(2, 2, 71, 0.445);
+  padding: 1rem;
+  border-radius: 25%;
+  width: 280px;
+}
+
+p{
+  margin: 10px auto;
+}
+
+img{
+  width: 200px;
+  height: 250px;
+  border-radius: 25%;
+}
