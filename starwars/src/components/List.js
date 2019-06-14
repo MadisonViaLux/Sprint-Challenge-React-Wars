@@ -97,9 +97,7 @@ class List extends Component {
         return(
 
             <>
-                <div className='republic'>   
-                    
-
+                <div className='republic'>
                     <JediForm 
                     name={this.state.name}
                     title={this.state.title}
