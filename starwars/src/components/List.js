@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { Component } from "react";
 import ListForm from './ListForm';
+import JediForm from './JediForm'
 
 
 const forceUsers = [
@@ -43,15 +44,80 @@ const forceUsers = [
 
 
 
+class List extends Component {
 
-const List = () => {
-    return(
-        <div className='profiles'>
-            {forceUsers.map(element => (
-                <ListForm userObject={element} />
-                ))}
-        </div>
-    )
+
+    state = {
+        jediList: forceUsers,
+        name: '',
+        title: '',
+        faction: '',
+        img: '',
+        location: '',
+        bio: '',
+    }
+    
+    
+    
+    forcePush = event => {
+        console.log(event)
+        // console.log(event.target.value)
+
+        this.setState({
+            [event.target.name]: event.target.value
+        })
+    }
+    
+
+
+
+    
+    addJedi = event => {
+        event.preventDefault();
+        this.setState({
+            jediList: [
+                ...this.state.jediList,
+                {
+                    name: this.state.name,
+                    title: this.state.title,
+                    faction: this.state.faction,
+                    img: this.state.img,
+                    location: this.state.location,
+                    bio: this.state.bio
+                }
+            ]
+        });
+    };
+
+
+
+
+    render(){
+
+        return(
+             <>   
+                <h1>Jedi/Sith</h1>
+
+                <JediForm 
+                name={this.state.name}
+                title={this.state.title}
+                faction={this.state.faction}
+                img={this.state.img}
+                location={this.state.location}
+                bio={this.state.bio}
+                forcePush={this.forcePush}
+                addJedi={this.addJedi}
+                />
+
+
+                <div className='profiles'>
+                    {this.state.jediList.map(element => (
+                        <ListForm userObject={element} />
+                        ))}
+                </div>
+            </>
+        )
+    }
 }
 
 

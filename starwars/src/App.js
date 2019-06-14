@@ -39,7 +39,7 @@ class App extends Component {
       <div className="App">
 
         <div>
-
+          <h1 className='Header'>Star Wars Characters</h1>
           <List />
 
         </div>
