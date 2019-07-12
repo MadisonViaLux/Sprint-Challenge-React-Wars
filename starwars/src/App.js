@@ -1,41 +1,59 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from "react";
+import axios from 'axios';
 import './App.css';
 
-class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      starwarsChars: []
-    };
-  }
+export default function App() {
+  // constructor() {
+  //   super();
+  //   this.state = {
+  //     starwarsChars: []
+  //   };
+  // }
 
-  componentDidMount() {
-    this.getCharacters('https://swapi.co/api/people/');
-  }
+  // componentDidMount() {
+  //   this.getCharacters('https://swapi.co/api/people/');
+  // }
 
-  getCharacters = URL => {
+
+  const [starWars, setstarWars] = useState([]);
+
+
+  // useEffect(() => {
+  //   axios.get('https://swapi.co/api/people/').then
+  // })
+
+
+  useEffect(() => {
     // feel free to research what this code is doing.
     // At a high level we are calling an API to fetch some starwars data from the open web.
     // We then take that data and resolve it our state.
-    fetch(URL)
+    axios.get('https://swapi.co/api/people/?format=json')
+      // .then(res => {
+      //   return res.json();
+      //   console.log(res.json())
+      // })
       .then(res => {
-        return res.json();
+        setstarWars(res.data.results);
       })
-      .then(data => {
-        this.setState({ starwarsChars: data.results });
-      })
-      .catch(err => {
-        throw new Error(err);
-      });
-  };
+      // .catch(err => {
+      //   throw new Error(err);
+      // });
+      
+  }, []);
 
-  render() {
+
+  console.log(starWars)
+
+
+ 
     return (
       <div className="App">
         <h1 className="Header">React Wars</h1>
+
+
+        {}
+
       </div>
     );
-  }
+  
 }
-
-export default App;
