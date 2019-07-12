@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from "react";
+
+import JediList from './components/JediList'
+
 import axios from 'axios';
 import './App.css';
 
@@ -42,7 +45,7 @@ export default function App() {
   }, []);
 
 
-  console.log(starWars)
+  // console.log(starWars)
 
 
  
@@ -51,7 +54,16 @@ export default function App() {
         <h1 className="Header">React Wars</h1>
 
 
-        {}
+        {/* <JediList {...starWars}/> */}
+
+        {/* {starWars.map(element => (
+          console.log(element)
+          
+        ))} */}
+
+       {starWars.map(element => (
+        <JediList jediInfo={element} />
+      ))}
 
       </div>
     );
