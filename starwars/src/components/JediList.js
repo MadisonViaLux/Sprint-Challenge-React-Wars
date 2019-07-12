@@ -20,25 +20,28 @@ const JediSpecs = styled.div`
     justify-content: space-evenly;
 `;
 
+const DetailSpecs = styled.p`
+    color: #443e3e;
+    text-shadow: 1px 1px 5px #fff;
+`
 
 
+const JediList = ({name,gender,eye_color,hair_color,height,skin_color,mass}) => {
 
-const JediList = props => {
-
-    console.log(props)
+    
 
     return(
         <InfoCard>
 
-            <h3>{props.jediInfo.name}</h3>
+            <h3>{name}</h3>
 
             <JediSpecs>
-                <p>Gender: {props.jediInfo.gender}</p>
-                <p>Eye Color: {props.jediInfo.eye_color}</p>
-                <p>HAir Color: {props.jediInfo.hair_color}</p>
-                <p>Height: {props.jediInfo.height}</p>
-                <p>Skin Color: {props.jediInfo.skin_color}</p>
-                <p>Mass: {props.jediInfo.mass}</p>
+                <DetailSpecs>Gender: {gender}</DetailSpecs>
+                <DetailSpecs>Eye Color: {eye_color}</DetailSpecs>
+                <DetailSpecs>Hair Color: {hair_color}</DetailSpecs>
+                <DetailSpecs>Height: {height}</DetailSpecs>
+                <DetailSpecs>Skin Color: {skin_color}</DetailSpecs>
+                <DetailSpecs>Mass: {mass}</DetailSpecs>
             </JediSpecs>
 
 

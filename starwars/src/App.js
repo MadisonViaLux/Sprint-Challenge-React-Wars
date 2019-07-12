@@ -40,11 +40,6 @@ export default function App() {
   const [starWars, setstarWars] = useState([]);
 
 
-  // useEffect(() => {
-  //   axios.get('https://swapi.co/api/people/').then
-  // })
-
-
   useEffect(() => {
     // feel free to research what this code is doing.
     // At a high level we are calling an API to fetch some starwars data from the open web.
@@ -55,6 +50,7 @@ export default function App() {
       //   console.log(res.json())
       // })
       .then(res => {
+        console.log(res)
         setstarWars(res.data.results);
       })
       // .catch(err => {
@@ -70,21 +66,26 @@ export default function App() {
  
     return (
       <div className="App">
-        <h1 className="Header">React Wars</h1>
-
-
+        
         {/* <JediList {...starWars}/> */}
 
-        {/* {starWars.map(element => (
-          console.log(element)
-          
-        ))} */}
+        {starWars.map(element => (
+        <div>  {console.log(element)}
+          <JediList {...element} /></div>
+        ))}
 
-       {starWars.map(element => (
+       {/* {starWars.map(element => (
         <JediList jediInfo={element} />
-      ))}
+      ))} */}
 
       </div>
     );
   
 }
+
+// props = {
+//   hair: "blond", gender: "male", weight:"120lbs"
+  
+// }
+// props.jediInfo.hair
+// props.a
