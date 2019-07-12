@@ -1,0 +1,12 @@
+.infoCard{
+    border: 2px dashed purple;
+    border-radius: 15%;
+    background-color: rgba(250, 235, 215, 0.753);
+    margin: 3rem auto;
+    width: 30rem;
+}
+
+.jediSpecs{
+    display: flex;
+    justify-content: space-evenly;
+}
