@@ -5,6 +5,25 @@ import JediList from './components/JediList'
 import axios from 'axios';
 import './App.css';
 
+
+
+
+
+// describe('JediList', () => {
+//   it('renders correctly', () => {
+//     const wrapper = rtl.render(<JediList/>);
+//     expectExport(wrapper.baseElement).toMatchSnapshot();
+//   });
+// });
+
+
+
+
+
+
+
+
+
 export default function App() {
   // constructor() {
   //   super();

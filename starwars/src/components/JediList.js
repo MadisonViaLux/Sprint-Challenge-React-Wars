@@ -1,14 +1,39 @@
 import React from 'react'
-import { Card } from 'semantic-ui-react'
+import './StarWars.css'
+import styled from 'styled-components'
+// import { Card } from 'semantic-ui-react'
+
+
+
+const infoCard = styled.div`
+    border: 2px dashed purple;
+    border-radius: 15%;
+    background-color: rgba(250, 235, 215, 0.753);
+    margin: 3rem auto;
+    width: 30rem;
+`;
+
+
+
+// const infoCard = styled.div`
+//     border: 2px dashed purple;
+//     border-radius: 15%;
+//     background-color: rgba(250, 235, 215, 0.753);
+//     margin: 3rem auto;
+//     width: 30rem;
+// `;
+
+
+
 
 const JediList = props => {
 
     console.log(props)
 
     return(
-        <div className='infoCard'>
+        <infoCard>
+
             <h3>{props.jediInfo.name}</h3>
-            
 
             <div className='jediSpecs'>
                 <p>Gender: {props.jediInfo.gender}</p>
@@ -20,7 +45,7 @@ const JediList = props => {
             </div>
 
 
-        </div>
+        </infoCard>
     )
 }
 
