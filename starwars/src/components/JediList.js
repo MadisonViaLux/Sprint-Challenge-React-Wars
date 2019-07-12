@@ -5,7 +5,7 @@ import styled from 'styled-components'
 
 
 
-const infoCard = styled.div`
+const InfoCard = styled.div`
     border: 2px dashed purple;
     border-radius: 15%;
     background-color: rgba(250, 235, 215, 0.753);
@@ -15,13 +15,10 @@ const infoCard = styled.div`
 
 
 
-// const infoCard = styled.div`
-//     border: 2px dashed purple;
-//     border-radius: 15%;
-//     background-color: rgba(250, 235, 215, 0.753);
-//     margin: 3rem auto;
-//     width: 30rem;
-// `;
+const JediSpecs = styled.div`
+    display: flex;
+    justify-content: space-evenly;
+`;
 
 
 
@@ -31,21 +28,21 @@ const JediList = props => {
     console.log(props)
 
     return(
-        <infoCard>
+        <InfoCard>
 
             <h3>{props.jediInfo.name}</h3>
 
-            <div className='jediSpecs'>
+            <JediSpecs>
                 <p>Gender: {props.jediInfo.gender}</p>
                 <p>Eye Color: {props.jediInfo.eye_color}</p>
                 <p>HAir Color: {props.jediInfo.hair_color}</p>
                 <p>Height: {props.jediInfo.height}</p>
                 <p>Skin Color: {props.jediInfo.skin_color}</p>
                 <p>Mass: {props.jediInfo.mass}</p>
-            </div>
+            </JediSpecs>
 
 
-        </infoCard>
+        </InfoCard>
     )
 }
 
